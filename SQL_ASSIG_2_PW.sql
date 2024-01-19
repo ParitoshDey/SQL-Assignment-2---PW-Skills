@@ -83,7 +83,6 @@ order by rented_times desc limit 5;
 
 -- Question 6:
 -- Determine the customers who have rented movies from both stores (store ID 1 and store ID 2).
--- Hint: Use JOINS with rental, inventory, and customer tables and consider COUNT() and GROUP BY.
 select customer.customer_id,customer.first_name,customer.last_name from customer
 join rental on customer.customer_id = rental.customer_id
 join inventory on rental.inventory_id = inventory.inventory_id
